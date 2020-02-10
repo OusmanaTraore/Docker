@@ -8,7 +8,7 @@ Cet exercice étudie plus en détail le montage des différents volumes dans le 
 
 1. Démarrez un conteneur docker à partir d'une image bash. Gardez le processus en premier plan et en mode interactif avec un pseudo-terminal à disposition.
 
-   1. Une fois à l'intérieur du conteneur, afficher la liste des systèmes de fichiers montés à l'aide de la commande
+   - Une fois à l'intérieur du conteneur, afficher la liste des systèmes de fichiers montés à l'aide de la commande
 
    ```bash
    df
@@ -16,7 +16,7 @@ Cet exercice étudie plus en détail le montage des différents volumes dans le 
 
    Comparez avec les différents systèmes de fichiers de votre machine hôte.
 
-   2. Affichez plus de propriétés sur les systèmes de fichiers du conteneur en inspectant le fichier
+   - Affichez plus de propriétés sur les systèmes de fichiers du conteneur en inspectant le fichier
 
    ```bash
    /proc/mounts
@@ -24,7 +24,7 @@ Cet exercice étudie plus en détail le montage des différents volumes dans le 
 
    Et comparez avec celui de votre machine hôte. Indiquez notamment quels sont ceux en read-only (ro) au lieu de read-write (rw). Pouvez-vous expliquer la raison de cette différence?
 
-   3. Modifier le fichier système
+   - Modifier le fichier système
 
    ```bash
    /etc/sysctl.conf
@@ -44,17 +44,17 @@ Cet exercice étudie plus en détail le montage des différents volumes dans le 
 
    Que se passe-t-il dans le conteneur si vous lancez cette commande? Pouvez-vous comparer avec votre machine hôte?
 
-   4. Stopper et détruiser le conteneur.
+   - Stopper et détruiser le conteneur.
 
-2. Démarrez un conteneur docker à partir d'une image bash. Gardez le processus en premier plan et en mode interactif avec un pseudo-terminal à disposition. Ajoutez cette fois le flag
+1. Démarrez un conteneur docker à partir d'une image bash. Gardez le processus en premier plan et en mode interactif avec un pseudo-terminal à disposition. Ajoutez cette fois le flag
 
-```bash
---privileged
-```
+   ```bash
+   --privileged
+   ```
 
-   1. Répétez les étapes de la première question et notez s'il y a des différences dans le conteneur.
+   - Répétez les étapes de la première question et notez s'il y a des différences dans le conteneur.
 
-   2. Une fois appliquer la commande de reconfiguration du système à chaud quittez ET détruisez le conteneur. Afficher les propriétés systèmes de la machine hôte à l'aide de la commande
+   - Une fois appliquer la commande de reconfiguration du système à chaud quittez ET détruisez le conteneur. Afficher les propriétés systèmes de la machine hôte à l'aide de la commande
 
    ```bash
    sysctl -a
@@ -62,8 +62,8 @@ Cet exercice étudie plus en détail le montage des différents volumes dans le 
 
    et cherchez la configuration fs.file-max. Qu'observez-vous?
 
-   3. Essayez de modifier à nouveau le système de la machine hôte en utilisant un conteneur "privilégié".
+   - Essayez de modifier à nouveau le système de la machine hôte en utilisant un conteneur "privilégié".
 
-3. Conclure sur la manière dont un conteneur utilise le système de la machine hôte. Comparez avec la virtualisation via une machine virtuelle et un hyperviseur.
+1. Conclure sur la manière dont un conteneur utilise le système de la machine hôte. Comparez avec la virtualisation via une machine virtuelle et un hyperviseur.
 
 ***
